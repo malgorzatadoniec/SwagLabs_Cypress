@@ -11,6 +11,8 @@ describe('Verify login page layout', () => {
     loginObj.isVisible(elements.loginLogo())
     loginObj.isNotEmpty(elements.loginWrapper())
     loginObj.isNotEmpty(elements.loginInnerWrapper())
+
+    // do dopracowania
   
 
     // loginObj.elements.loginWrapper().should('not.be.empty').within(() => {
