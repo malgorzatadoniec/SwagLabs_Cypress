@@ -1,6 +1,5 @@
-class loginPage{
+const elements = {
 
-    elements = {
         loginLogo : () => cy.get('.login_logo'),
         loginWrapper : () => cy.get('.login_wrapper'),
         loginInnerWrapper : () => cy.get('.login_wrapper-inner'),
@@ -15,23 +14,6 @@ class loginPage{
         usernameCred : () => cy.get('#login_credentials'),
         passwordCred : () => cy.get('.login_password'),
         errorTex : () => cy.get('[data-test="error"]')
-    }
-
-    enterUsername(username)
-    {
-        this.elements.usernameInput().type(username);
-    }
-
-    enterPassword(password)
-    {
-        this.elements.passwordInput().type(password);
-    }
-
-    clickSubmit() 
-    {
-        this.elements.loginBtn().click();
-    }
 
 }
-
-export default loginPage;
+export {elements};
