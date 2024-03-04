@@ -15,9 +15,9 @@ class Methods{
         cy.url().should('eq', url)
     }
 
-    errorText(field, text)
+    exist(field)
     {
-        field.should('be.visible').and('have.text', text)
+        field.should('exist')
     }
 
     isVisible(field)
@@ -30,6 +30,31 @@ class Methods{
         field.should('not.be.empty')
     }
 
+    haveText(field, text)
+    {
+        field.should('have.text', text)
+    }
+
+    haveValue(field, value)
+    {
+        field.should('have.value', value)
+    }
+
+    haveAttr(field, attr, value)
+    {
+        field.should('have.attr', attr, value)
+    }
+
+    haveClass(field, className)
+    {
+        field.should('have.class', className)
+    }
+
+    contain(field, value)
+    {
+        field.should('contain', value)
+    }
+
 }
 
-export default Methods;
+export const methods = new Methods()
