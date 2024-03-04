@@ -9,7 +9,6 @@ describe('Verify login page layout', () => {
   })
   
   it('Main elements are not empty', () => {
-    cy.visit("/index.html")
     methods.isVisible(elements.loginLogo())
     methods.isNotEmpty(elements.loginWrapper())
     methods.isNotEmpty(elements.loginInnerWrapper())

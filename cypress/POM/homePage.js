@@ -12,6 +12,7 @@ const elements = {
     headerLabel : () => cy.get('.header_label'),
     appLogo : () => cy.get('.app_logo'),
     shoppingCart : () => cy.get('.shopping_cart_container'),
+    cartItemsCount : () => cy.get('.fa-layers-counter'),
 // second header
     scndheaderContainer : () => cy.get('.header_secondary_container'),
     productLabel : () => cy.get('.product_label'),
@@ -35,7 +36,7 @@ const elements = {
     footerSMIcons : () => cy.get('.social'),
     smIconsTwitter : () => cy.get('.social_twitter'),
     smIconsFacebook : () => cy.get('.social_facebook'),
-    smIconsLinkedin : () => cy.get('.social_linkedin'),
+    smIconsLinkedin : () => cy.get('.social_linkedin')
 }
 
 export {elements};
