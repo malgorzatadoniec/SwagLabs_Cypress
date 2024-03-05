@@ -1,4 +1,4 @@
-const elements = {
+const CheckYourInfolements = {
 
     contentWrapper : () => cy.get('#contents_wrapper'),
 // header
@@ -30,4 +30,4 @@ const elements = {
 
 }
 
-export {elements};
+export {CheckYourInfolements};

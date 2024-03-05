@@ -1,4 +1,4 @@
-import {elements} from "../POM/loginPage"
+import {LoginPageElements} from "../POM/loginPage"
 import {methods} from "../methods/verifyLoginMethods"
 
 describe(' Verify Login', () => {

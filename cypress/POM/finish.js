@@ -1,4 +1,4 @@
-const elements = {
+const FinishElements = {
 
     contentWrapper : () => cy.get('#contents_wrapper'),
 // header
@@ -24,4 +24,4 @@ const elements = {
     smIconsLinkedin : () => cy.get('.social_linkedin')
 }
 
-export {elements};
+export {FinishElements};
