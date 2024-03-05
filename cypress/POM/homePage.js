@@ -1,4 +1,4 @@
-const elements = {
+const HomePageElements = {
 
     pageWrapper : () => cy.get('#page_wrapper'),
     menuBtn : () => cy.get('.bm-burger-button > button'),
@@ -38,4 +38,4 @@ const elements = {
     smIconsLinkedin : () => cy.get('.social_linkedin')
 }
 
-export {elements};
+export {HomePageElements};
