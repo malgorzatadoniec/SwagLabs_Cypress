@@ -2,7 +2,7 @@
 import {HomePageElements} from "../POM/homePage"
 import {methods} from "../methods/homePageLayoutMethods"
 
- describe('Verifi Home page layout', () => {
+ describe('Verify Home page layout', () => {
 
     beforeEach (() => {
         cy.visit("/inventory.html")
