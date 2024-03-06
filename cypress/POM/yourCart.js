@@ -2,6 +2,11 @@ const yourCartElements = {
 
 // header
     menuBtn : () => cy.get('.bm-burger-button > button'),
+    crossBtn : () => cy.get('.bm-cross-button > button'),
+    menuAllItems : () => cy.get('#inventory_sidebar_link'),
+    menuAbout : () => cy.get('#about_sidebar_link'),
+    menuLogout : () => cy.get('#logout_sidebar_link'),
+    menuResret : () => cy.get('#reset_sidebar_link'),
     headerContainer : () => cy.get('#header_container'),
     headerLabel : () => cy.get('.header_label'),
     appLogo : () => cy.get('.app_logo'),
