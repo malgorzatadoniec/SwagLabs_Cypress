@@ -1,4 +1,4 @@
-const checkYourInfolements = {
+const checkYourInfoElements = {
 
     contentWrapper : () => cy.get('#contents_wrapper'),
 // header
