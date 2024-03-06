@@ -1,4 +1,4 @@
-import {loginPageElements} from "../POM/loginPage"
+// import {loginPageElements} from "../POM/loginPage"
 
 class Methods{
 
