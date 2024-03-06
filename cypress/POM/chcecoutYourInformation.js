@@ -30,4 +30,4 @@ const checkYourInfoElements = {
 
 }
 
-export {checkYourInfolements};
+export {checkYourInfoElements};
