@@ -1,6 +1,6 @@
 // import {loginPageElements} from "../POM/loginPage"
 
-class Methods{
+class LoginPageLayoutMethods{
 
 loginCred(field, value)
 {
@@ -9,4 +9,4 @@ loginCred(field, value)
 
 }
 
-export const methods = new Methods()
+export const loginPageLayoutMethods = new LoginPageLayoutMethods()

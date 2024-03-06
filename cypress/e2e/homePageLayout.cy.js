@@ -1,6 +1,6 @@
 
 import {homePageElements} from "../POM/homePage"
-import {methods} from "../methods/homePageLayoutMethods"
+import {homePageLayoutMethods} from "../methods/homePageLayoutMethods"
 
  describe('Verify Home page layout', () => {
 
@@ -30,7 +30,7 @@ it('Verify navigation bar elements', () => {
 })
 
 it('Verify elements of first product container', () => {
-    methods.productContainer
+    homePageLayoutMethods.productContainer
     (1, 
     4,
     './img/sauce-backpack-1200x1500.jpg',
@@ -40,7 +40,7 @@ it('Verify elements of first product container', () => {
 })
 
 it('Verify elements of second product container', () => {
-    methods.productContainer
+    homePageLayoutMethods.productContainer
     (2, 
     0,
     './img/bike-light-1200x1500.jpg',
@@ -50,7 +50,7 @@ it('Verify elements of second product container', () => {
 })
 
 it('Verify elements of third product container', () => {
-    methods.productContainer
+    homePageLayoutMethods.productContainer
     (3, 
     1,
     './img/bolt-shirt-1200x1500.jpg',
@@ -60,7 +60,7 @@ it('Verify elements of third product container', () => {
 })
 
 it('Verify elements of fourth product container', () => {
-    methods.productContainer
+    homePageLayoutMethods.productContainer
     (4, 
     5,
     './img/sauce-pullover-1200x1500.jpg',
@@ -70,7 +70,7 @@ it('Verify elements of fourth product container', () => {
 })
 
 it('Verify elements of fifth product container', () => {
-    methods.productContainer
+    homePageLayoutMethods.productContainer
     (5, 
     2,
     './img/red-onesie-1200x1500.jpg',
@@ -80,7 +80,7 @@ it('Verify elements of fifth product container', () => {
 })
 
 it('Verify elements of sixth product container', () => {
-    methods.productContainer
+    homePageLayoutMethods.productContainer
     (6, 
     3,
     './img/red-tatt-1200x1500.jpg',

@@ -1,6 +1,6 @@
 import {loginPageElements} from "../POM/loginPage"
 
-class Methods{
+class VerifyLoginMethods{
 
 succesfulLogin(username, password)
 {
@@ -20,4 +20,4 @@ unsuccesfulLogin(username, password, text)
 
 }
 
-export const methods = new Methods()
+export const verifyLoginMethods = new VerifyLoginMethods()
