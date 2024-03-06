@@ -1,4 +1,4 @@
-const CheckoutOverviewElements = {
+const checkoutOverviewElements = {
 
 // header
     menuBtn : () => cy.get('.bm-burger-button > button'),
@@ -40,4 +40,4 @@ const CheckoutOverviewElements = {
     smIconsLinkedin : () => cy.get('.social_linkedin')
 }
 
-export {CheckoutOverviewElements};
+export {checkoutOverviewElements};

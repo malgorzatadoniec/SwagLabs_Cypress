@@ -1,4 +1,4 @@
-const YourCartElements = {
+const yourCartElements = {
 
 // header
     menuBtn : () => cy.get('.bm-burger-button > button'),
@@ -34,4 +34,4 @@ const YourCartElements = {
     smIconsLinkedin : () => cy.get('.social_linkedin')
 }
 
-export {YourCartElements};
+export {yourCartElements};

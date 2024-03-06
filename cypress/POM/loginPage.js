@@ -1,4 +1,4 @@
-const LoginPageElements = {
+const loginPageElements = {
 
         loginLogo : () => cy.get('.login_logo'),
         loginWrapper : () => cy.get('.login_wrapper'),
@@ -16,4 +16,4 @@ const LoginPageElements = {
         errorTex : () => cy.get('[data-test="error"]')
 
 }
-export {LoginPageElements};
+export {loginPageElements};
