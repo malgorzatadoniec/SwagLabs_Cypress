@@ -1,5 +1,5 @@
 
-import {HomePageElements} from "../POM/homePage"
+import {homePageElements} from "../POM/homePage"
 import {methods} from "../methods/homePageLayoutMethods"
 
  describe('Verify Home page layout', () => {
@@ -9,24 +9,24 @@ import {methods} from "../methods/homePageLayoutMethods"
       })
 
 it('Main elements are not empty', () => {
-    HomePageElements.pageWrapper().should('not.be.empty').and('be.visible')
-    HomePageElements.headerContainer().should('not.be.empty').and('be.visible')
-    HomePageElements.inventoryList().should('not.be.empty').and('be.visible')
-    HomePageElements.footer().should('not.be.empty').and('be.visible')
+    homePageElements.pageWrapper().should('not.be.empty').and('be.visible')
+    homePageElements.headerContainer().should('not.be.empty').and('be.visible')
+    homePageElements.inventoryList().should('not.be.empty').and('be.visible')
+    homePageElements.footer().should('not.be.empty').and('be.visible')
 })
 
 it('Verify top header elements', () => {
-    HomePageElements.menuBtn().should('exist')
-    HomePageElements.headerLabel().should('not.be.empty').and('be.visible')
-    HomePageElements.appLogo().should('be.visible')
-    HomePageElements.shoppingCart().should('be.visible')
+    homePageElements.menuBtn().should('exist')
+    homePageElements.headerLabel().should('not.be.empty').and('be.visible')
+    homePageElements.appLogo().should('be.visible')
+    homePageElements.shoppingCart().should('be.visible')
 })
 
 it('Verify navigation bar elements', () => {
-    HomePageElements.scndheaderContainer().should('not.be.empty').and('be.visible')
-    HomePageElements.productLabel().should('be.visible').and('have.text', 'Products')
-    HomePageElements.peekIcon().should('be.visible')
-    HomePageElements.sortContainer().should('be.visible')
+    homePageElements.scndheaderContainer().should('not.be.empty').and('be.visible')
+    homePageElements.productLabel().should('be.visible').and('have.text', 'Products')
+    homePageElements.peekIcon().should('be.visible')
+    homePageElements.sortContainer().should('be.visible')
 })
 
 it('Verify elements of first product container', () => {
@@ -90,15 +90,14 @@ it('Verify elements of sixth product container', () => {
 })
 
 it('Verify elements of footer', () => {
-    HomePageElements.footerImage()
+    homePageElements.footerImage()
         .should('be.visible')
         .and('have.attr', 'src', 'img/SwagBot_Footer_graphic.png')
         .and('have.prop', 'naturalWidth')
         .should('be.greaterThan', 0)
-    HomePageElements.footerCopyRights().should('be.visible').and('have.text', '© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy')
-    HomePageElements.footerSMIcons().should('not.be.empty')
-    HomePageElements.smIconsTwitter().should('be.visible')
-    HomePageElements.smIconsFacebook().should('be.visible')
-    HomePageElements.smIconsLinkedin().should('be.visible')
+        homePageElements.footerCopyRights().should('be.visible').and('have.text', '© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy')
+        homePageElements.smIconsTwitter().should('be.visible')
+        homePageElements.smIconsFacebook().should('be.visible')
+        homePageElements.smIconsLinkedin().should('be.visible')
 })
 })

@@ -1,4 +1,4 @@
-import {LoginPageElements} from "../POM/loginPage"
+import {loginPageElements} from "../POM/loginPage"
 import {methods} from "../methods/loginPageLayoutMethods"
 
 describe('Verify login page layout', () => {
@@ -8,18 +8,18 @@ describe('Verify login page layout', () => {
   })
   
   it('Main elements are not empty', () => {
-    LoginPageElements.loginLogo().should('be.visible')
-    LoginPageElements.loginWrapper().should('not.be.empty').and('be.visible')
-    LoginPageElements.loginInnerWrapper().should('not.be.empty').and('be.visible')
-    LoginPageElements.credInnerWrapper().should('not.be.empty').and('be.visible')
+    loginPageElements.loginLogo().should('be.visible')
+    loginPageElements.loginWrapper().should('not.be.empty').and('be.visible')
+    loginPageElements.loginInnerWrapper().should('not.be.empty').and('be.visible')
+    loginPageElements.credInnerWrapper().should('not.be.empty').and('be.visible')
   })
 
   it('Login form is visible and have all elements', () => {
-    LoginPageElements.loginForm().should('be.visible').and('not.be.empty')
-    methods.loginCred(LoginPageElements.usernameInput(), 'Username')
-    methods.loginCred(LoginPageElements.passwordInput(), 'Password')
-    LoginPageElements.loginBtn().should('be.visible').and('have.value', 'LOGIN')
-    LoginPageElements.loginImage()
+    loginPageElements.loginForm().should('be.visible').and('not.be.empty')
+    methods.loginCred(loginPageElements.usernameInput(), 'Username')
+    methods.loginCred(loginPageElements.passwordInput(), 'Password')
+    loginPageElements.loginBtn().should('be.visible').and('have.value', 'LOGIN')
+    loginPageElements.loginImage()
       .should('be.visible')
       .and('have.attr', 'src', 'img/Login_Bot_graphic.png')
       .and('have.prop', 'naturalWidth')
@@ -28,9 +28,9 @@ describe('Verify login page layout', () => {
   })
 
   it('Credential data are visible and correct', () => {
-    LoginPageElements.usernameCredTitle().should('be.visible').and('have.text', 'Accepted usernames are:')
-    LoginPageElements.passwordCredTitle().should('be.visible').and('have.text', 'Password for all users:')
-    LoginPageElements.usernameCred().should('not.be.empty').and('be.visible')
-    LoginPageElements.passwordCred().should('not.be.empty').and('be.visible')
+    loginPageElements.usernameCredTitle().should('be.visible').and('have.text', 'Accepted usernames are:')
+    loginPageElements.passwordCredTitle().should('be.visible').and('have.text', 'Password for all users:')
+    loginPageElements.usernameCred().should('not.be.empty').and('be.visible')
+    loginPageElements.passwordCred().should('not.be.empty').and('be.visible')
   })
 })

@@ -1,21 +1,21 @@
-import {LoginPageElements} from "../POM/loginPage"
+import {loginPageElements} from "../POM/loginPage"
 
 class Methods{
 
 succesfulLogin(username, password)
 {
-    LoginPageElements.usernameInput().type(username)
-    LoginPageElements.passwordInput().type(password)
-    LoginPageElements.loginBtn().click()
+    loginPageElements.usernameInput().type(username)
+    loginPageElements.passwordInput().type(password)
+    loginPageElements.loginBtn().click()
     cy.url('include', '/inventory.html')
 }
 
 unsuccesfulLogin(username, password, text)
 {
-    LoginPageElements.usernameInput().type(username)
-    LoginPageElements.passwordInput().type(password)
-    LoginPageElements.loginBtn().click()
-    LoginPageElements.errorTex().should('have.text', text)
+    loginPageElements.usernameInput().type(username)
+    loginPageElements.passwordInput().type(password)
+    loginPageElements.loginBtn().click()
+    loginPageElements.errorTex().should('have.text', text)
 }
 
 }
