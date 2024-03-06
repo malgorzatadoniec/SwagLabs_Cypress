@@ -1,7 +1,7 @@
 
 import {homePageElements} from "../POM/homePage"
 
-class Methods{
+class HomePageLayoutMethods{
 
 productContainer(id, no, value, text, desc, price, text4)
 {
@@ -19,4 +19,4 @@ productContainer(id, no, value, text, desc, price, text4)
 
 }
 
-export const methods = new Methods()
+export const homePageLayoutMethods = new HomePageLayoutMethods()
