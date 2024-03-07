@@ -3,6 +3,7 @@ const checkYourInfoElements = {
     contentWrapper : () => cy.get('#contents_wrapper'),
 // header
     menuBtn : () => cy.get('.bm-burger-button > button'),
+    menuBar : () => cy.get('.bm-menu'),
     crossBtn : () => cy.get('.bm-cross-button > button'),
     menuAllItems : () => cy.get('#inventory_sidebar_link'),
     menuAbout : () => cy.get('#about_sidebar_link'),

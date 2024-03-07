@@ -22,6 +22,16 @@ it('Verify top header elements', () => {
     homePageElements.shoppingCart().should('be.visible')
 })
 
+it('Menu is visible and has all elements', () => {
+    homePageElements.menuBtn().click()
+    homePageElements.menuBar().should('be.visible')
+    homePageElements.crossBtn().should('be.visible')
+    homePageElements.menuAllItems().should('be.visible')
+    homePageElements.menuAbout().should('be.visible')
+    homePageElements.menuLogout().should('be.visible')
+    homePageElements.menuResret().should('be.visible')
+    })
+
 it('Verify navigation bar elements', () => {
     homePageElements.scndheaderContainer().should('not.be.empty').and('be.visible')
     homePageElements.productLabel().should('be.visible').and('have.text', 'Products')
