@@ -4,6 +4,8 @@ const checkYourInfoElements = {
 // header
     menuBtn : () => cy.get('.bm-burger-button > button'),
     menuBar : () => cy.get('.bm-menu'),
+    menuItemsList : () => cy.get('.bm-item-list'),
+    outsideMenu : () => cy.get('.bm-overlay'),
     crossBtn : () => cy.get('.bm-cross-button > button'),
     menuAllItems : () => cy.get('#inventory_sidebar_link'),
     menuAbout : () => cy.get('#about_sidebar_link'),

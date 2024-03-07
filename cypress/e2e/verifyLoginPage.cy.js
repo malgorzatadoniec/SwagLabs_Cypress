@@ -1,5 +1,5 @@
 import {loginPageElements} from "../POM/loginPage"
-import {verifyLoginMethods} from "../methods/verifyLoginMethods"
+import {loginMethods} from "../methods/loginMethods"
 
 describe(' Verify Login', () => {
   
@@ -8,30 +8,73 @@ describe(' Verify Login', () => {
   })
 
   it('Succesful login', () => {
-    verifyLoginMethods.succesfulLogin('standard_user', 'secret_sauce')
+    loginMethods.succesfulLogin(
+      loginPageElements.usernameInput, 
+      'standard_user',  
+      loginPageElements.passwordInput,
+      'secret_sauce',
+      loginPageElements.loginBtn)
   })
 
   it('Unsuccesful login - wrong password', () => {
-    verifyLoginMethods.unsuccesfulLogin('standard_user', 'secret_secret', 'Epic sadface: Username and password do not match any user in this service')
+    loginMethods.unsuccesfulLogin(
+      loginPageElements.usernameInput,
+      'standard_user', 
+      loginPageElements.passwordInput,
+      'secret_secret', 
+      loginPageElements.loginBtn,
+      loginPageElements.errorTex,
+      'Epic sadface: Username and password do not match any user in this service')
   })
 
   it('Unsuccesful login - wrong username', () => {
-    verifyLoginMethods.unsuccesfulLogin('user123', 'secret_sauce', 'Epic sadface: Username and password do not match any user in this service')
+    loginMethods.unsuccesfulLogin(
+      loginPageElements.usernameInput,
+      'user123', 
+      loginPageElements.passwordInput,
+      'secret_sauce', 
+      loginPageElements.loginBtn,
+      loginPageElements.errorTex,
+      'Epic sadface: Username and password do not match any user in this service')
   })
 
   it('Unsuccesful login - wrong username and wrong password', () => {
-    verifyLoginMethods.unsuccesfulLogin('user123', 'secret_secret', 'Epic sadface: Username and password do not match any user in this service')
+    loginMethods.unsuccesfulLogin(
+      loginPageElements.usernameInput,
+      'user123', 
+      loginPageElements.passwordInput,
+      'secret_secret', 
+      loginPageElements.loginBtn,
+      loginPageElements.errorTex,
+      'Epic sadface: Username and password do not match any user in this service')
   })
 
   it('Unsuccesful login - locked out user', () => {
-    verifyLoginMethods.unsuccesfulLogin('locked_out_user', 'secret_sauce', 'Epic sadface: Sorry, this user has been locked out.')
+    loginMethods.unsuccesfulLogin(
+      loginPageElements.usernameInput,
+      'locked_out_user', 
+      loginPageElements.passwordInput,
+      'secret_sauce', 
+      loginPageElements.loginBtn,
+      loginPageElements.errorTex,
+      'Epic sadface: Sorry, this user has been locked out.')
   })
 
   it('Succesful login - problem user', () => {
-    verifyLoginMethods.succesfulLogin('problem_user', 'secret_sauce')
-  })
+    loginMethods.succesfulLogin(
+      loginPageElements.usernameInput, 
+      'problem_user',  
+      loginPageElements.passwordInput,
+      'secret_sauce',
+      loginPageElements.loginBtn)
+    })
 
   it('Succesful login - performance glitch user', () => {
-    verifyLoginMethods.succesfulLogin('problem_user', 'secret_sauce')
+    loginMethods.succesfulLogin(
+      loginPageElements.usernameInput, 
+      'performance_glitch_user',  
+      loginPageElements.passwordInput,
+      'secret_sauce',
+      loginPageElements.loginBtn)
   })
 })
