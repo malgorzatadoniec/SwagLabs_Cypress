@@ -25,6 +25,7 @@ it('Verify top header elements', () => {
 it('Menu is visible and has all elements', () => {
     homePageElements.menuBtn().click()
     homePageElements.menuBar().should('be.visible')
+    homePageElements.menuItemsList().should('not.be.empty')
     homePageElements.crossBtn().should('be.visible')
     homePageElements.menuAllItems().should('be.visible')
     homePageElements.menuAbout().should('be.visible')
