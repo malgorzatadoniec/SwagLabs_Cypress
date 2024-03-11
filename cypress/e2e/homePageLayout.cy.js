@@ -30,7 +30,7 @@ it('Menu is visible and has all elements', () => {
     homePageElements.menuAllItems().should('be.visible')
     homePageElements.menuAbout().should('be.visible')
     homePageElements.menuLogout().should('be.visible')
-    homePageElements.menuResret().should('be.visible')
+    homePageElements.menuReset().should('be.visible')
     })
 
 it('Verify navigation bar elements', () => {

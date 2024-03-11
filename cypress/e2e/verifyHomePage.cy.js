@@ -64,7 +64,7 @@ it('Menu – clicking on Reset App state', () => {
     homePageElements.productAddBtn(4).click()
     homePageElements.cartItemsCount().should('exist').and('be.visible')
     homePageElements.menuBtn().click()
-    homePageElements.menuResret().click()
+    homePageElements.menuReset().click()
     homePageElements.cartItemsCount().should('not.exist')
 })
 
