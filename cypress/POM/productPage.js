@@ -21,6 +21,7 @@ const productPageElements = {
     itemDesc : () => cy.get('.inventory_details_desc'),
     itemPrice : () => cy.get('.inventory_details_price'),
     addToCartBtn : () => cy.get('.btn_primary'),
+    removeBtn : () => cy.get('.btn_secondary'),
     backBtn : () => cy.get('.inventory_details_back_button')
 
 }
