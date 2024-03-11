@@ -57,7 +57,7 @@ describe('Verify product page funcionalities - on example of product with id = 1
     //     homePageElements.productRemoveBtn(3).should('not.exist')
     // })
 
-    it.only('Removing product from cart from product page and going back to home page with “All Items” button in menu', () =>{
+    it('Removing product from cart from product page and going back to home page with “All Items” button in menu', () =>{
         productPageElements.addToCartBtn().click()
         productPageElements.cartItemsCount().should('be.visible').and('have.text', '1')
         productPageElements.removeBtn().click()

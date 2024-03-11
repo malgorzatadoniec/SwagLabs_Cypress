@@ -35,7 +35,7 @@ it('“CONTINUE SHOPPING” button is visible', () => {
     yourCartElements.continueBtn().should('be.visible').and('have.text', 'Continue Shopping')
 })
 
-it.only('“CHECKOUT” button is visible', () => {
+it('“CHECKOUT” button is visible', () => {
     yourCartElements.checkoutBtn().should('be.visible').and('have.text', 'CHECKOUT')
 })
 })
