@@ -1,7 +1,6 @@
 import {homePageElements} from "../POM/homePage"
 import {yourCartElements} from "../POM/yourCart"
-import { homePageMethods } from "../methods/homePageMethods"
-import { productPageElements } from "../POM/productPage"
+import {ProductPageMetchod} from "../methods/specificMetchods/productPageMethod"
 
 describe('Verify Home page funcionalities', () => {
 
@@ -131,99 +130,20 @@ it('Having more than one product in cart and removing one of them using “REMOV
     yourCartElements.cartContent().should('not.contain', 'Sauce Labs Bolt T-Shirt')
 })
 
-it("Going to product 1 page - clicking on product name", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productName(4),
-        productPageElements.itemName, 
-        'Sauce Labs Backpack', 
-        'id=4')
+const nameID = [4, 0, 1, 5, 2, 3]
+
+nameID.forEach(nameID => {
+it(`Going to product page (name id = ${nameID}) - clicking on product name`, () => {
+    new ProductPageMetchod(nameID).productPageCheck(homePageElements.productName(nameID))
+    })
 })
 
-it("Going to product 1 page - clicking on product image", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productImg(4), 
-        productPageElements.itemName, 
-        'Sauce Labs Backpack',
-        'id=4')
+const imageID = [4, 0, 1, 5, 2, 3]
+
+imageID.forEach(imageID => {
+it(`Going to product (image id = ${imageID}) - clicking on product image`, () => {
+    new ProductPageMetchod(imageID).productPageCheck(homePageElements.productImg(imageID))
+    })
 })
 
-it("Going to product 2 page - clicking on product name", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productName(0),
-        productPageElements.itemName,
-        'Sauce Labs Bike Light',
-         'id=0')
-})
-
-it("Going to product 2 page - clicking on product image", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productImg(0),
-        productPageElements.itemName,
-        'Sauce Labs Bike Light',
-        'id=0')
-})
-
-it("Going to product 3 page - clicking on product name", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productName(1),
-        productPageElements.itemName,
-        'Sauce Labs Bolt T-Shirt',
-        'id=1')
-})
-
-it("Going to product 3 page - clicking on product image", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productImg(1), 
-        productPageElements.itemName,
-        'Sauce Labs Bolt T-Shirt',
-        'id=1')
-})
-
-it("Going to product 4 page - clicking on product name", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productName(5),
-        productPageElements.itemName,
-        'Sauce Labs Fleece Jacket',
-        'id=5')
-})
-
-it("Going to product 4 page - clicking on product image", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productImg(5), 
-        productPageElements.itemName,
-        'Sauce Labs Fleece Jacket',
-        'id=5')
-})
-
-it("Going to product 5 page - clicking on product name", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productName(2),
-        productPageElements.itemName,
-        'Sauce Labs Onesie',
-        'id=2')
-})
-
-it("Going to product 5 page - clicking on product image", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productImg(2),
-        productPageElements.itemName,
-        'Sauce Labs Onesie', 
-        'id=2')
-})
-
-it("Going to product 6 page - clicking on product name", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productName(3), 
-        productPageElements.itemName,
-        'Test.allTheThings() T-Shirt (Red)',
-        'id=3')
-})
-
-it("Going to product 6 page - clicking on product image", () => {
-    homePageMethods.productPageCheck(
-        homePageElements.productImg(3), 
-        productPageElements.itemName,
-        'Test.allTheThings() T-Shirt (Red)',
-        'id=3')
-})
 })
