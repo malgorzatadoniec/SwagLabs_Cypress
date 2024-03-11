@@ -9,7 +9,7 @@ const homePageElements = {
     menuAllItems : () => cy.get('#inventory_sidebar_link'),
     menuAbout : () => cy.get('#about_sidebar_link'),
     menuLogout : () => cy.get('#logout_sidebar_link'),
-    menuResret : () => cy.get('#reset_sidebar_link'),
+    menuReset : () => cy.get('#reset_sidebar_link'),
 // header
     headerContainer : () => cy.get('#header_container'),
     headerLabel : () => cy.get('.header_label'),
