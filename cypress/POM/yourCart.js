@@ -29,6 +29,7 @@ const yourCartElements = {
     itemPricebar : (id) => cy.get(`:nth-child(${id}) > .cart_item_label > .item_pricebar`),
     itemPrice : (id) => cy.get(`:nth-child(${id}) > .cart_item_label > .item_pricebar > .inventory_item_price`),
     removeBtn : (id) => cy.get(`:nth-child(${id}) > .cart_item_label > .item_pricebar > .btn_secondary`),
+    oneItemRemoveBtn : () => cy.get('.item_pricebar > .btn_secondary'),
     cartFooter : () => cy.get('.cart_footer'),
     continueBtn : () => cy.get('.cart_footer > .btn_secondary'),
     checkoutBtn : () => cy.get('.btn_action'),

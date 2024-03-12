@@ -8,8 +8,16 @@ describe('Verify Home page funcionalities', () => {
         cy.visit("/inventory.html")
       })
 
-it('Cart icon gets user to Your Cart page', () => {
+it('Cart icon gets user to Your Cart page (no product added)', () => {
     homePageElements.shoppingCart().click()
+    yourCartElements.cartContent().should('not.contain', 'REMOVE')
+    cy.url().should('include', '/cart.html')
+    })
+
+it('Cart icon gets user to Your Cart page (no product added)', () => {
+    homePageElements.productAddBtn(3).click()
+    homePageElements.shoppingCart().click()
+    yourCartElements.cartContent().should('contain', 'REMOVE')
     cy.url().should('include', '/cart.html')
     })
 
