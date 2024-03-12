@@ -27,6 +27,7 @@ const checkYourInfoElements = {
     buttonsContainer : () => cy.get('.checkout_buttons'),
     cancelBtn : () => cy.get('.cart_cancel_link'),
     continueBtn : () => cy.get('.btn_primary'),
+    errorText : () => cy.get('[data-test="error"]'),
 // footer
     footer : () => cy.get('.footer'),
     footerImage : () => cy.get('.footer_robot'),
