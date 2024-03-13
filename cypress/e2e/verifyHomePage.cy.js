@@ -1,6 +1,6 @@
 import {homePageElements} from "../POM/homePage"
 import {yourCartElements} from "../POM/yourCart"
-import {ProductPageMetchod} from "../methods/specificMetchods/productPageMethod"
+import {ProductPageMethod} from "../methods/specificMethods/productPageMethod"
 
 describe('Verify Home page funcionalities', () => {
 
@@ -142,7 +142,7 @@ const nameID = [4, 0, 1, 5, 2, 3]
 
 nameID.forEach(nameID => {
 it(`Going to product page (name id = ${nameID}) - clicking on product name`, () => {
-    new ProductPageMetchod(nameID).productPageCheck(homePageElements.productName(nameID))
+    new ProductPageMethod(nameID).productPageCheck(homePageElements.productName(nameID))
     })
 })
 
@@ -150,7 +150,7 @@ const imageID = [4, 0, 1, 5, 2, 3]
 
 imageID.forEach(imageID => {
 it(`Going to product (image id = ${imageID}) - clicking on product image`, () => {
-    new ProductPageMetchod(imageID).productPageCheck(homePageElements.productImg(imageID))
+    new ProductPageMethod(imageID).productPageCheck(homePageElements.productImg(imageID))
     })
 })
 

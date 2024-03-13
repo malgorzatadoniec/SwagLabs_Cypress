@@ -1,7 +1,7 @@
 import {checkYourInfoElements} from "../POM/chcecoutYourInformation"
 import {yourCartElements} from "../POM/yourCart"
 import {checkoutOverviewElements} from "../POM/checkoutOverview"
-import {yourInfoMethods} from "../methods/yourInfoMethods"
+import {methods} from "../methods/methods"
 
 describe('Verify Checkout: Your Information page layout', () => {
 
@@ -16,7 +16,7 @@ it('“CANCEL” button gets user back to Your Cart', () => {
 })
 
 it('“CONTINUE” button gets user to Checkout: Overview page', () => {
-    yourInfoMethods.userInput(
+    methods.userInput(
         checkYourInfoElements.firstName, 
         'Jan', 
         checkYourInfoElements.lastName, 
@@ -34,7 +34,7 @@ it('User doesn’t provide any personal info', () => {
 })
 
 it('User doesn’t provide First Name', () => {
-    yourInfoMethods.wrongUserInput(
+    methods.wrongUserInput(
         checkYourInfoElements.lastName,
         'Doe',
         checkYourInfoElements.postalCode,
@@ -46,7 +46,7 @@ it('User doesn’t provide First Name', () => {
 })
 
 it('User doesn’t provide Last Name', () => {
-    yourInfoMethods.wrongUserInput(
+    methods.wrongUserInput(
         checkYourInfoElements.firstName,
         'Joe',
         checkYourInfoElements.postalCode,
@@ -57,7 +57,7 @@ it('User doesn’t provide Last Name', () => {
 })
 
 it('User doesn’t provide Zip/Postal Code', () => {
-    yourInfoMethods.wrongUserInput(
+    methods.wrongUserInput(
         checkYourInfoElements.firstName,
         'Joe',
         checkYourInfoElements.lastName,

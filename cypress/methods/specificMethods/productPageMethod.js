@@ -1,4 +1,4 @@
-class ProductPageMetchod {
+class ProductPageMethod {
 
     constructor(id){
         this.id = id
@@ -80,4 +80,4 @@ productPageLayout()
 }
 }
 
-module.exports = {ProductPageMetchod}
+module.exports = {ProductPageMethod}
