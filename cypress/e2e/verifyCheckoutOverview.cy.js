@@ -26,26 +26,21 @@ it('“FINISH” button gets user to Finish page', () => {
 })
 
 describe('Total sum', () => {
-    it.only('Total sum of item price, tax and total (v1)', () => {
+    it('Total sum of item price, tax and total', () => {
         cy.visit('/inventory.html')
         methods.addedProducts(
             homePageElements.productAddBtn(3),
             homePageElements.productAddBtn(2),
             homePageElements.shoppingCart,
-            yourCartElements.checkoutBtn,
+            yourCartElements.checkoutBtn)
+        methods.userInput(
             checkYourInfoElements.firstName,
+            'John',
             checkYourInfoElements.lastName,
+            'Snow',
             checkYourInfoElements.postalCode,
-            checkYourInfoElements.continueBtn
-        )
-        checkoutOverviewElements.itemTotal().should('have.text', 'Item total: $25.98')
-        checkoutOverviewElements.tax().should('have.text', 'Tax: $2.08')
-        checkoutOverviewElements.totalPrice().should('have.text', 'Total: $28.06')
-    })
-
-    it.only('Total sum of item price, tax and total (v2)', () => {
-        cy.visit('/inventory.html')
-        methods.addedProductsV2(3, 2)
+            '22-222',
+            checkYourInfoElements.continueBtn)
         checkoutOverviewElements.itemTotal().should('have.text', 'Item total: $25.98')
         checkoutOverviewElements.tax().should('have.text', 'Tax: $2.08')
         checkoutOverviewElements.totalPrice().should('have.text', 'Total: $28.06')

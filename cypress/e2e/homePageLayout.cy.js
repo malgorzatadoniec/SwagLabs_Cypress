@@ -1,5 +1,6 @@
 
 import {homePageElements} from "../POM/homePage"
+import { methods } from "../methods/methods"
 import {ProductMethod} from "../methods/specificMethods/productMethod"
 
  describe('Verify Home page layout', () => {
@@ -49,14 +50,12 @@ prodId.forEach(prodId => {
 });
 
 it('Verify elements of footer', () => {
-    homePageElements.footerImage()
-        .should('be.visible')
-        .and('have.attr', 'src', 'img/SwagBot_Footer_graphic.png')
-        .and('have.prop', 'naturalWidth')
-        .should('be.greaterThan', 0)
-        homePageElements.footerCopyRights().should('be.visible').and('have.text', '© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy')
-        homePageElements.smIconsTwitter().should('be.visible')
-        homePageElements.smIconsFacebook().should('be.visible')
-        homePageElements.smIconsLinkedin().should('be.visible')
+    methods.image(
+        homePageElements.footerImage(),
+        'img/SwagBot_Footer_graphic.png')
+    homePageElements.footerCopyRights().should('be.visible').and('have.text', '© 2020 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy')
+    homePageElements.smIconsTwitter().should('be.visible')
+    homePageElements.smIconsFacebook().should('be.visible')
+    homePageElements.smIconsLinkedin().should('be.visible')
     })
 })

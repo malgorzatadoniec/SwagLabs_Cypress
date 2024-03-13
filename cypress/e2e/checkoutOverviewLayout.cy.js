@@ -47,19 +47,19 @@ describe('Summary contains of ordered products', () => {
     
     it('Ordered products are in summary ', () => {
         cy.visit('/inventory.html')
-        homePageElements.productAddBtn(1).click()
-        homePageElements.productAddBtn(2).click()
-        homePageElements.shoppingCart().click()
-        yourCartElements.checkoutBtn().click()
+        methods.addedProducts(
+            homePageElements.productAddBtn(1),
+            homePageElements.productAddBtn(2),
+            homePageElements.shoppingCart,
+            yourCartElements.checkoutBtn)
         methods.userInput(
             checkYourInfoElements.firstName,
             'Jenny',
             checkYourInfoElements.lastName,
             'Moore',
             checkYourInfoElements.postalCode,
-            '11-111'
-        )
-        checkYourInfoElements.continueBtn().click()
+            '11-111',
+            checkYourInfoElements.continueBtn)
         checkoutOverviewElements.itemName(4).should('have.text', 'Sauce Labs Backpack')
         checkoutOverviewElements.itemName(0).should('have.text', 'Sauce Labs Bike Light')
     })
