@@ -1,38 +1,27 @@
-import { homePageElements } from "../POM/homePage"
-import { yourCartElements } from "../POM/yourCart"
-import { checkYourInfoElements } from "../POM/chcecoutYourInformation"
-
 class Methods {
 
-    addedProducts(addOne, addTwo, shoppingCart, checkout, fieldFName, fieldLName, fieldZip, continueBtn)
+    addedProducts(addOne, addTwo, shoppingCart, checkout)
     {
         addOne.click()
         addTwo.click()
         shoppingCart().click()
         checkout().click()
-        fieldFName().type('John')
-        fieldLName().type('Snow')
-        fieldZip().type('22-222')
-        continueBtn().click()
     }
 
-    addedProductsV2(id, no)
-    {
-        homePageElements.productAddBtn(id).click()
-        homePageElements.productAddBtn(no).click()
-        homePageElements.shoppingCart().click()
-        yourCartElements.checkoutBtn().click()
-        checkYourInfoElements.firstName().type('John')
-        checkYourInfoElements.lastName().type('Snow')
-        checkYourInfoElements.postalCode().type('22-222')
-        checkYourInfoElements.continueBtn().click()
-    }
-
-    userInput(fieldFName, name, fieldLName, lname, fieldZip, zip )
+    userInput(fieldFName, name, fieldLName, lname, fieldZip, zip, continueBtn)
     {
         fieldFName().type(name)
         fieldLName().type(lname)
         fieldZip().type(zip)
+        continueBtn().click()
+    }
+
+    image(image, src)
+    {
+       image.should('be.visible')
+       .and('have.attr', 'src', src)
+       .and('have.prop', 'naturalWidth')
+       .should('be.greaterThan', 0)
     }
 
     wrongUserInput(frstfield, text, scndfield, input, button, message, messageText)

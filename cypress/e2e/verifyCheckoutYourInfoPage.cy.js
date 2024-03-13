@@ -22,8 +22,8 @@ it('“CONTINUE” button gets user to Checkout: Overview page', () => {
         checkYourInfoElements.lastName, 
         'Kowal', 
         checkYourInfoElements.postalCode, 
-        '00-00')
-    checkYourInfoElements.continueBtn().click()
+        '00-00',
+        checkYourInfoElements.continueBtn)
     checkoutOverviewElements.subHeader().should('have.text', 'Checkout: Overview')
     cy.url().should('include', '/checkout-step-two.html')
 })

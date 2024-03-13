@@ -19,12 +19,9 @@ describe('Verify login page layout', () => {
     methods.loginCred(loginPageElements.usernameInput, 'Username')
     methods.loginCred(loginPageElements.passwordInput, 'Password')
     loginPageElements.loginBtn().should('be.visible').and('have.value', 'LOGIN')
-    loginPageElements.loginImage()
-      .should('be.visible')
-      .and('have.attr', 'src', 'img/Login_Bot_graphic.png')
-      .and('have.prop', 'naturalWidth')
-      .should('be.greaterThan', 0)
-
+    methods.image(
+      loginPageElements.loginImage(),
+      'img/Login_Bot_graphic.png')
   })
 
   it('Credential data are visible and correct', () => {
