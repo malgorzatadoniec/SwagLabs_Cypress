@@ -1,5 +1,5 @@
 import {loginPageElements} from "../POM/loginPage"
-import {loginMethods} from "../methods/loginMethods"
+import {methods} from "../methods/methods"
 
 describe(' Verify Login', () => {
   
@@ -8,7 +8,7 @@ describe(' Verify Login', () => {
   })
 
   it('Succesful login', () => {
-    loginMethods.succesfulLogin(
+    methods.succesfulLogin(
       loginPageElements.usernameInput, 
       'standard_user',  
       loginPageElements.passwordInput,
@@ -17,7 +17,7 @@ describe(' Verify Login', () => {
   })
 
   it('Unsuccesful login - wrong password', () => {
-    loginMethods.unsuccesfulLogin(
+    methods.unsuccesfulLogin(
       loginPageElements.usernameInput,
       'standard_user', 
       loginPageElements.passwordInput,
@@ -28,7 +28,7 @@ describe(' Verify Login', () => {
   })
 
   it('Unsuccesful login - wrong username', () => {
-    loginMethods.unsuccesfulLogin(
+    methods.unsuccesfulLogin(
       loginPageElements.usernameInput,
       'user123', 
       loginPageElements.passwordInput,
@@ -39,7 +39,7 @@ describe(' Verify Login', () => {
   })
 
   it('Unsuccesful login - wrong username and wrong password', () => {
-    loginMethods.unsuccesfulLogin(
+    methods.unsuccesfulLogin(
       loginPageElements.usernameInput,
       'user123', 
       loginPageElements.passwordInput,
@@ -50,7 +50,7 @@ describe(' Verify Login', () => {
   })
 
   it('Unsuccesful login - locked out user', () => {
-    loginMethods.unsuccesfulLogin(
+    methods.unsuccesfulLogin(
       loginPageElements.usernameInput,
       'locked_out_user', 
       loginPageElements.passwordInput,
@@ -61,7 +61,7 @@ describe(' Verify Login', () => {
   })
 
   it('Succesful login - problem user', () => {
-    loginMethods.succesfulLogin(
+    methods.succesfulLogin(
       loginPageElements.usernameInput, 
       'problem_user',  
       loginPageElements.passwordInput,
@@ -70,7 +70,7 @@ describe(' Verify Login', () => {
     })
 
   it('Succesful login - performance glitch user', () => {
-    loginMethods.succesfulLogin(
+    methods.succesfulLogin(
       loginPageElements.usernameInput, 
       'performance_glitch_user',  
       loginPageElements.passwordInput,

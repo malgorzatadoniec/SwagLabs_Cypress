@@ -1,6 +1,6 @@
 
 import {homePageElements} from "../POM/homePage"
-import {ProductMethod} from "../methods/specificMetchods/productMethod"
+import {ProductMethod} from "../methods/specificMethods/productMethod"
 
  describe('Verify Home page layout', () => {
 
