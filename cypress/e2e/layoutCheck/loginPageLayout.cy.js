@@ -1,5 +1,5 @@
-import {loginPageElements} from "../POM/loginPage"
-import {methods} from "../methods/methods"
+import {loginPageElements} from "../../POM/loginPage"
+import {methods} from "../../methods/methods"
 
 describe('Verify login page layout', () => {
 
@@ -16,8 +16,8 @@ describe('Verify login page layout', () => {
 
   it('Login form is visible and have all elements', () => {
     loginPageElements.loginForm().should('be.visible').and('not.be.empty')
-    methods.loginCred(loginPageElements.usernameInput, 'Username')
-    methods.loginCred(loginPageElements.passwordInput, 'Password')
+    methods.placeholderValue(loginPageElements.usernameInput, 'Username')
+    methods.placeholderValue(loginPageElements.passwordInput, 'Password')
     loginPageElements.loginBtn().should('be.visible').and('have.value', 'LOGIN')
     methods.image(
       loginPageElements.loginImage(),

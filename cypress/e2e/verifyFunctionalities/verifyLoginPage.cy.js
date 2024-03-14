@@ -1,5 +1,5 @@
-import {loginPageElements} from "../POM/loginPage"
-import {methods} from "../methods/methods"
+import {loginPageElements} from "../../POM/loginPage"
+import {methods} from "../../methods/methods"
 
 describe(' Verify Login', () => {
   
