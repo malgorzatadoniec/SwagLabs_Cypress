@@ -53,13 +53,12 @@ describe('Verify Home page funcionalities', () => {
         cy.url().should('include', '/inventory.html')
     })
 
-    it.only('Menu – clicking on About', () => {
+    it('Menu – clicking on About', () => {
         cy.visit('/cart.html')
         homePageElements.menuBtn().click()
-        homePageElements.menuAbout().click()
-        // cy.request('GET', 'https://saucelabs.com/').then((response) =>{
-        //     expect(response.status).to.eq(200)
-        // })
+        homePageElements.menuAbout()
+            .should('have.attr', 'href', 'https://saucelabs.com/')
+            .should('have.text', 'About')
     })
 
     it('Menu – clicking on Logout', () => {

@@ -55,6 +55,13 @@ class ProductPageMethod {
     }
 }
 
+/**
+ * productPageCheck()
+ * Verify if link redirects user to proper product page
+ * @param {*} field link to given product page
+ * @param {*} name product's name
+ * @param {*} url product's id which should be included in url
+ */
 productPageCheck(field)
 {
     field.click()
@@ -62,6 +69,15 @@ productPageCheck(field)
     cy.url().should('include', this.url)
 }
 
+/**
+ * Verify contents of product page for every product
+ * @param {*} id product's id
+ * @param {*} value image's source
+ * @param {*} name product's name
+ * @param {*} desc product's description
+ * @param {*} price product's price
+ * @param {*} url product's id which should be included in url
+ */
 productPageLayout()
 {
     cy.visit('/inventory.html')
