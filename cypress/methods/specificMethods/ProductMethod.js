@@ -1,13 +1,3 @@
-/**
- * Verify content of products containers at home page (link to product's page, image, name, description and price)
- * @param {*} prodId product id
- * @param {*} no product's link id
- * @param {*} value image's source
- * @param {*} text product's name
- * @param {*} desc product's description
- * @param {*} price product's price
- */
-
 class ProductMethod{
 
     constructor(prodId)
@@ -73,6 +63,15 @@ class ProductMethod{
     }
 }
 
+/**
+ * Verify content of products containers at home page (link to product's page, image, name, description and price)
+ * @param {*} prodId product id
+ * @param {*} no product's link id
+ * @param {*} value image's source
+ * @param {*} text product's name
+ * @param {*} desc product's description
+ * @param {*} price product's price
+ */
 productContainer()
 {
     cy.get(`.inventory_list > :nth-child(${this.prodId})`).should('not.be.empty')
